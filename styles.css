@@ -1,0 +1,82 @@
+body {
+    background-color: #F6F1E6;
+    font-family: Arial;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;           
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#login {
+    background: #F0ECE1;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    margin-bottom: 20px; 
+    width: 100%;  
+    margin: 15px;
+    color: #652A0E;
+}
+
+#nome, #email, #senha, #Confirme_senha {
+    margin-bottom: 7px;
+   
+}
+
+label {
+    padding-left: 3px;
+    font-size: 13px;
+}
+
+input {
+    width: 100%;
+    padding: 10px; 
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Inter';
+    background: #F2EAD8;
+    
+}
+
+input::placeholder {
+    color: #ad904d;
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;   
+}
+
+#button{
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #652A0E;
+    color: #FFF;
+    border: none;
+    
+}
+
+#link {
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+   color: #652A0E;
+   font-family: Arial;
+   font-size: 15px;
+}
