@@ -33,12 +33,13 @@ img {
     width: 500px;
     display: flex;
     justify-content: center;
+    
 }
 
 .form {
     margin-bottom: 20px; 
     width: 100%;  
-    margin: 15px 15px 0px 15px;
+    margin: 15px 15px 0px 15px;;
     color: #652A0E;
 }
 
@@ -58,6 +59,7 @@ input {
     margin-top: 6px;
     border: 1px solid #ccc;
     border-radius: 6px;
+    font-family: 'Inter';
     background: #F2EAD8;
     
 }
@@ -71,11 +73,10 @@ input::placeholder {
     display: flex;
     justify-content: center;
     margin-top: 20px;   
-    margin-bottom: 25px;
 }
 
 #button{
-    width: 100%;
+    width: 210px;
     padding: 12px;
     border-radius: 8px;
     background-color: #652A0E;
@@ -88,7 +89,7 @@ input::placeholder {
 #link {
    display: flex;
    justify-content: center;
-   margin-top: 5px;
+   margin-top: 13px;
    color: #652A0E;
    font-family: Arial;
    font-size: 14px;

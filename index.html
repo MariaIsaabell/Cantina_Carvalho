@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="caminho/do/seu-icone.png" type="image/x-icon">
 </head>
 
 <body>
-
     <div id="login">
         <form class="form">
+            <div class="logo">
+                <img src="/imag/Cantina_Carvalha.png" alt="Logo">
+            </div>
             <div class="form-container">
                 <label for="nome">Nome</label>
                 <div class="nome">
@@ -20,8 +22,8 @@
                 </div>
 
                 <label for="email">E-mail</label>
-                <div class="email-icone"> 
-                    <input type="email" id="email" placeholder="Seu e-mail" required > 
+                <div class="email-icone">
+                    <input type="email" id="email" placeholder="Seu e-mail" required>
                 </div>
 
                 <label for="senha">Senha</label>
@@ -40,7 +42,25 @@
                 <button id="button">CADASTRAR</button>
             </div>
 
-            <a  id="link" href="">Você é funcionário da escola?</a>
+            <a id="link" href="">Você é funcionário da escola?</a>
+            <a id="link" href="">Já possui uma conta?</a>
+
+        </form>
+
+    </div>
+
+    <div id="login">
+        <form class="form">
+            <div class="form-container">
+                
+                <div class="nome">
+                    <input type="text" id="nome" placeholder="Adicione o seu NIF" required>
+                </div>
+
+            </div>
+            <div class="btn-container">
+                <button id="button">CADASTRAR</button>
+            </div>
 
         </form>
 
