@@ -50,12 +50,14 @@ img {
 label {
     padding-left: 3px;
     font-size: 13px;
+    font-family: 'Inter';
 }
 
 input {
     width: 100%;
     padding: 10px; 
     margin-top: 6px;
+    font-family: 'Inter';
     border: 1px solid #ccc;
     border-radius: 6px;
     background: #F2EAD8;
@@ -93,3 +95,5 @@ input::placeholder {
    font-family: Arial;
    font-size: 14px;
 }
+
+
