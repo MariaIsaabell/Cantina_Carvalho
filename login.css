@@ -1,5 +1,4 @@
 body {
-    background-color: #F6F1E6;
     font-family: Arial;
     display: flex;
     justify-content: center; 
@@ -13,17 +12,68 @@ body {
     box-sizing: border-box;
 }
 
-.fundo{
+
+.fundo {
     background-color: #4A200C;
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.tema{
-    background-color: white;
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
+.fundo #login {
+    background: #4A200C; 
 }
+
+.fundo #button {
+    background-color: #F0ECE1; 
+    color: #4C210D;
+}
+
+.fundo input{
+    background: #3D1807;
+}
+
+.fundo #link {
+    color: #F0ECE1 !important; /* Usamos !important para garantir que o azul suma */
+    text-decoration: none;    
+}
+
+.fundo input::placeholder {
+    color: #F0ECE1; 
+}
+
+.fundo label{
+    color: #F0ECE1;
+}
+
+.tema {
+    background-color: #F6F1E6;
+}
+
+
+.tema #login {
+    background: #F0ECE1; 
+}
+
+.tema #button {
+    background-color: #652A0E; 
+    color: #FFFF;
+}
+
+.tema input{
+    background: #F2EAD8;
+}
+
+.tema #link{
+    color: #652A0E !important; /* Usamos !important para garantir que o azul suma */
+    text-decoration: none;
+}
+
+.tema input::placeholder {
+    color: #CEBF9D; 
+}
+
+.tema label{
+    color: #652A0E;
+}
+
 
 .logo {
     display: flex;
@@ -38,7 +88,7 @@ img {
 }
 
 #login {
-    background: #F0ECE1;
+    
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -73,7 +123,6 @@ input {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-family: 'Inter';
-    background: #F2EAD8;
     
 }
 
@@ -93,7 +142,6 @@ input::placeholder {
     padding: 12px;
     border-radius: 8px;
     background-color: #652A0E;
-    color: #FFF;
     border: none;
     font-weight: bold;
     
@@ -103,7 +151,6 @@ input::placeholder {
    display: flex;
    justify-content: center;
    margin-top: 13px;
-   color: #652A0E;
    font-family: Arial;
    font-size: 14px;
 }
