@@ -1,5 +1,5 @@
 body {
-    font-family: Arial;
+    font-family: Inter;
     display: flex;
     justify-content: center; 
     align-items: center;     
@@ -14,11 +14,11 @@ body {
 
 
 .fundo {
-    background-color: #4A200C;
+    background-color: #1A110E;
 }
 
 .fundo #login {
-    background: #4A200C; 
+    background: #2D1D17; 
 }
 
 .fundo #button {
@@ -27,12 +27,12 @@ body {
 }
 
 .fundo input{
-    background: #3D1807;
+    background: #3a241cfd;
+    border: none;
 }
 
 .fundo #link {
-    color: #F0ECE1 !important; /* Usamos !important para garantir que o azul suma */
-    text-decoration: none;    
+    color: #F0ECE1 !important; /* Usamos !important para garantir que o azul suma */  
 }
 
 .fundo input::placeholder {
@@ -63,7 +63,6 @@ body {
 
 .tema #link{
     color: #652A0E !important; /* Usamos !important para garantir que o azul suma */
-    text-decoration: none;
 }
 
 .tema input::placeholder {
@@ -88,7 +87,6 @@ img {
 }
 
 #login {
-    
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -112,8 +110,9 @@ img {
 
 label {
     padding-left: 3px;
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'Inter';
+    padding: 4px;
 }
 
 input {
@@ -128,6 +127,8 @@ input {
 
 input::placeholder {
     color: #ad904d;
+    font-family: 'Inter';
+    font-size: 14px;
 }
 
 .btn-container {
@@ -144,13 +145,16 @@ input::placeholder {
     background-color: #652A0E;
     border: none;
     font-weight: bold;
+    font-family: 'Inter';
+    font-size: 15px;
     
 }
 
 #link {
    display: flex;
    justify-content: center;
-   margin-top: 13px;
-   font-family: Arial;
+   margin-top: 8px;
+   font-family: 'Inter';
    font-size: 14px;
 }
+
