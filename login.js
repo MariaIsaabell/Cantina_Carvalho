@@ -1,10 +1,9 @@
-const botao = document.querySelector(".btn")
+const botao = document.querySelector("#botao-tema")
 const body = document.querySelector("body")
-const formulario = document.querySelector("#login")
 
 botao.addEventListener("click", () => {
-    body.classList.toggle("tema");
-})
+    body.classList.toggle("tema-escuro");
+});
 
 
 

@@ -1,160 +1,166 @@
-body {
-    font-family: Inter;
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    height: 100vh;           
-    margin: 0;
-    padding: 0;
+/*  VARIÁVEIS DO TEMA CLARO (Padrão) */
+:root {
+    --font-main: 'Inter';
+    --bg-color: #F6F1E6;
+    --card-bg: #F0ECE1;
+    --input-bg: #F2EAD8;
+    --button-bg: #652A0E;
+    --button-text: #FFFFFF;
+    --text-color: #652A0E;
+    --placeholder-color: #CEBF9D;
+    --border-color: #ccc;
 }
 
+/* VARIÁVEIS DO TEMA ESCURO (Sobrescreve as de cima) */
+.tema-escuro {
+    --font-main: 'Inter';
+    --bg-color: #1A110E;
+    --card-bg: #2D1D17;
+    --input-bg: #402820;
+    --button-bg: #F0ECE1;
+    --button-text: #371707;
+    --text-color: #F0ECE1;
+    --placeholder-color: #F0ECE1;
+    --border-color: #5a3a2f;
+}
+
+.btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.checkbox {
+    opacity: 0; /* checkbox real está escondido */
+    position: absolute;
+}
+
+.label {
+    background-color: #7e584a;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+
+}
+
+.label .indicador {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;  
+    transition: transform 0.2s linear; /* transição do deslizamento do indicador */
+}
+
+
+/* Transição do Indicador (Bolinha Branca) */
+/* O sinal de "+" seleciona o elemento que vem LOGO APÓS o input (.label). */
+
+#botao-tema:checked + .label .indicador {
+    transform: translateX(24px); /* o indicador desliza 24px para a direita */
+}
+
+.img-lua, .img-sol{
+    width: 16px;
+    height: 16px;
+}
+
+
+/* RESET */
 * {
     box-sizing: border-box;
 }
 
-
-.fundo {
-    background-color: #1A110E;
-}
-
-.fundo #login {
-    background: #2D1D17; 
-}
-
-.fundo #button {
-    background-color: #F0ECE1; 
-    color: #4C210D;
-}
-
-.fundo input{
-    background: #3a241cfd;
-    border: none;
-}
-
-.fundo #link {
-    color: #F0ECE1 !important; /* Usamos !important para garantir que o azul suma */  
-}
-
-.fundo input::placeholder {
-    color: #F0ECE1; 
-}
-
-.fundo label{
-    color: #F0ECE1;
-}
-
-.tema {
-    background-color: #F6F1E6;
-}
-
-
-.tema #login {
-    background: #F0ECE1; 
-}
-
-.tema #button {
-    background-color: #652A0E; 
-    color: #FFFF;
-}
-
-.tema input{
-    background: #F2EAD8;
-}
-
-.tema #link{
-    color: #652A0E !important; /* Usamos !important para garantir que o azul suma */
-}
-
-.tema input::placeholder {
-    color: #CEBF9D; 
-}
-
-.tema label{
-    color: #652A0E;
-}
-
-
-.logo {
+body {
+    font-family: var(--font-main);
     display: flex;
-    justify-content: center; 
-    width: 100%;            
-
-}
-img {
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
 }
 
+/* CARD LOGIN */
 #login {
+    background: var(--card-bg);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 500px;
     display: flex;
     justify-content: center;
-    
 }
 
 .form {
-    margin-bottom: 20px; 
-    width: 100%;  
-    margin: 15px 15px 0px 15px;;
-    color: #652A0E;
+    width: 100%;
+    margin: 15px;
+    color: var(--text-color);
 }
 
-#nome, #email, #senha, #Confirme_senha {
-    margin-bottom: 7px;
-   
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+img {
+    height: 120px;
 }
 
 label {
-    padding-left: 3px;
     font-size: 12px;
-    font-family: 'Inter';
-    padding: 4px;
+    margin-left: 5px;
+    color: var(--text-color);
+    display: block; 
+    margin-bottom: 3px;
 }
 
 input {
     width: 100%;
-    padding: 10px; 
-    margin-top: 6px;
-    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
-    font-family: 'Inter';
-    
+    background: var(--input-bg);
+    color: var(--text-color);
 }
 
 input::placeholder {
-    color: #ad904d;
-    font-family: 'Inter';
-    font-size: 14px;
-}
-
-.btn-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;   
-}
-
-#button{
-    width: 210px;
-    padding: 12px;
-    border-radius: 8px;
-    background-color: #652A0E;
-    border: none;
-    font-weight: bold;
-    font-family: 'Inter';
-    font-size: 15px;
-    
+    color: var(--placeholder-color);
 }
 
 #link {
-   display: flex;
-   justify-content: center;
-   margin-top: 8px;
-   font-family: 'Inter';
-   font-size: 14px;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--text-color);
 }
 
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#button {
+    width: 210px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
