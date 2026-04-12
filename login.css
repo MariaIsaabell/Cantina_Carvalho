@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 /*  VARIÁVEIS DO TEMA CLARO (Padrão) */
+
 :root {
     --font-main: 'Inter';
     --bg-color: #F6F1E6;
@@ -12,6 +15,7 @@
 }
 
 /* VARIÁVEIS DO TEMA ESCURO (Sobrescreve as de cima) */
+
 .tema-escuro {
     --font-main: 'Inter';
     --bg-color: #1A110E;
@@ -22,21 +26,29 @@
     --text-color: #F0ECE1;
     --placeholder-color: #F0ECE1;
     --border-color: #5a3a2f;
+    --btn-toggle-bg: #3a231a;
 }
 
-.btn{
+/* Posicionamento do Botão */
+
+.btn {
     position: absolute;
     top: 20px;
     right: 20px;
 }
 
+/* checkbox do Botão */
+
 .checkbox {
-    opacity: 0; /* checkbox real está escondido */
+    opacity: 0;
+    /* checkbox real está escondido */
     position: absolute;
 }
 
+/* Corpo do Botão */
+
 .label {
-    background-color: #7e584a;
+    background-color: #e3d4ba;
     border-radius: 50px;
     cursor: pointer;
     display: flex;
@@ -50,26 +62,41 @@
 
 }
 
+.tema-escuro .label {
+    background-color: var(--btn-toggle-bg);
+}
+
+.tema-escuro .label .indicador {
+    background-color: #F0ECE1;
+}
+
+/* Indicador do Botão */
+
 .label .indicador {
-    background-color: #fff;
+    background-color: #3a231a;
     border-radius: 50%;
     position: absolute;
     top: 2px;
     left: 2px;
     height: 22px;
-    width: 22px;  
-    transition: transform 0.2s linear; /* transição do deslizamento do indicador */
+    width: 22px;
+    transition: transform 0.2s linear;
+    /* transição do deslizamento do indicador */
 }
 
 
 /* Transição do Indicador (Bolinha Branca) */
 /* O sinal de "+" seleciona o elemento que vem LOGO APÓS o input (.label). */
 
-#botao-tema:checked + .label .indicador {
-    transform: translateX(24px); /* o indicador desliza 24px para a direita */
+#botao-tema:checked+.label .indicador {
+    transform: translateX(24px);
+    /* o indicador desliza 24px para a direita */
 }
 
-.img-lua, .img-sol{
+/* Imagens do Botão  */
+
+.img-lua,
+.img-sol {
     width: 16px;
     height: 16px;
 }
@@ -120,9 +147,8 @@ img {
 label {
     font-size: 12px;
     margin-left: 5px;
-    color: var(--text-color);
-    display: block; 
-    margin-bottom: 3px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 input {
@@ -135,16 +161,12 @@ input {
     color: var(--text-color);
 }
 
-input::placeholder {
-    color: var(--placeholder-color);
+.tema-escuro input{
+    border: none;
 }
 
-#link {
-    display: flex;
-    justify-content: center;
-    margin-top: 12px;
-    font-size: 14px;
-    color: var(--text-color);
+input::placeholder {
+    color: var(--placeholder-color);
 }
 
 .btn-container {
@@ -163,4 +185,28 @@ input::placeholder {
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
+}
+
+/* HOVER: Quando o mouse passa em cima */
+.btn-container :hover {
+    transform:  scale(1.02);    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+   
+}
+
+/* ACTIVE: Quando o usuário clica */
+#button:active {
+    transform: scale(0.98);
+}
+
+#link {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+#link:hover {
+   transform:  scale(1.02); 
 }
